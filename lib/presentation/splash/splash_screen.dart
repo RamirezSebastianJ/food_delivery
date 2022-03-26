@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:food_delivery/presentation/login/login_screen.dart';
 
 import '../theme.dart';
 
@@ -46,11 +47,10 @@ class _SplashScreenState extends State<SplashScreen> {
                 child: DefaultTextStyle(
                   textAlign: TextAlign.left,
                   style: Theme.of(context).textTheme.headline2!.copyWith(
-                    color: const Color.fromRGBO(255, 255, 255, 1),
+                      color: const Color.fromRGBO(255, 255, 255, 1),
                       fontFamily: 'SFProRoundedBold',
                       fontWeight: FontWeight.w900,
-                      height: 0.9
-                  ),
+                      height: 0.9),
                   child: AnimatedTextKit(
                     animatedTexts: [
                       TyperAnimatedText(
@@ -86,7 +86,8 @@ class _SplashScreenState extends State<SplashScreen> {
                     ),
                   ),
                   Visibility(
-                    visible: true, //change this condition when login is implemented,
+                    visible:
+                        true, //change this condition when login is implemented,
                     child: Padding(
                       padding: const EdgeInsets.symmetric(
                           horizontal: 50.0, vertical: 30.0),
@@ -107,7 +108,13 @@ class _SplashScreenState extends State<SplashScreen> {
                                   RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(30.0),
                               ))),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.of(context).pushReplacement(
+                              MaterialPageRoute(
+                                builder: (_) => LoginScreen(),
+                              ),
+                            );
+                          },
                           child: const Text('Get started',
                               style: TextStyle(
                                 color: FoodDeliveryColors.red,
