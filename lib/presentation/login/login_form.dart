@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery/presentation/home/home_screen.dart';
 
 import '../theme.dart';
 
@@ -25,8 +26,9 @@ class _LoginFormState extends State<LoginForm> {
               child: const TextField(
                   decoration: InputDecoration(labelText: 'Email address')),
             ),
-             Padding(
-              padding: EdgeInsets.symmetric(vertical: MediaQuery.of(context).size.width * .02),
+            Padding(
+              padding: EdgeInsets.symmetric(
+                  vertical: MediaQuery.of(context).size.width * .02),
               child: const TextField(
                   obscureText: true,
                   decoration: InputDecoration(
@@ -59,18 +61,20 @@ class _LoginFormState extends State<LoginForm> {
               width: double.infinity,
               child: ElevatedButton(
                   style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(
-                          FoodDeliveryColors.orange),
+                      backgroundColor:
+                          MaterialStateProperty.all(FoodDeliveryColors.orange),
                       overlayColor: MaterialStateProperty.all(
                           FoodDeliveryColors.white.withOpacity(0.2)),
                       padding:
                           MaterialStateProperty.all(const EdgeInsets.all(20)),
-                      shape:
-                          MaterialStateProperty.all<RoundedRectangleBorder>(
-                              RoundedRectangleBorder(
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                          RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(30.0),
                       ))),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushReplacement(context,
+                        MaterialPageRoute(builder: (_) => HomeScreen()));
+                  },
                   child: const Text('Login')),
             )
           ],

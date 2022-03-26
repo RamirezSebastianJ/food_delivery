@@ -6,9 +6,11 @@ class FoodDeliveryColors {
   static const red = Color(0xFFFF460A);
   static const orangeGradient = Color(0xFFFF470B);
   static const grayBase = Color(0xFFF2F2F2);
+  static const grayIcon = Color(0xFFADADAF);
 }
 
 final lighTheme = ThemeData(
+  appBarTheme: const AppBarTheme(backgroundColor: FoodDeliveryColors.grayBase),
   inputDecorationTheme: const InputDecorationTheme(
     focusedBorder: UnderlineInputBorder(
       borderSide: BorderSide(color: FoodDeliveryColors.orange),
