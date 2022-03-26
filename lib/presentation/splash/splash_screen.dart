@@ -45,12 +45,12 @@ class _SplashScreenState extends State<SplashScreen> {
                 width: double.infinity,
                 child: DefaultTextStyle(
                   textAlign: TextAlign.left,
-                  style: const TextStyle(
-                      color: Color.fromRGBO(255, 255, 255, 1),
+                  style: Theme.of(context).textTheme.headline2!.copyWith(
+                    color: const Color.fromRGBO(255, 255, 255, 1),
                       fontFamily: 'SFProRoundedBold',
-                      fontSize: 65,
                       fontWeight: FontWeight.w900,
-                      height: 0.9),
+                      height: 0.9
+                  ),
                   child: AnimatedTextKit(
                     animatedTexts: [
                       TyperAnimatedText(
