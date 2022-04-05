@@ -7,6 +7,7 @@ class FoodDeliveryColors {
   static const orangeGradient = Color(0xFFFF470B);
   static const grayBase = Color(0xFFF2F2F2);
   static const grayIcon = Color(0xFFADADAF);
+  static const orangeNavDrawer = Color(0xFFFA4A0C);
 }
 
 final lighTheme = ThemeData(
@@ -26,3 +27,8 @@ final lighTheme = ThemeData(
     ),
   ),
 );
+
+const textStyleNavDrawer = TextStyle(
+    fontFamily: 'PoppinsRegular',
+    color: Colors.white,
+    fontWeight: FontWeight.bold);
